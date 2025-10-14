@@ -1,5 +1,3 @@
-# indexer.py
-
 import json
 import faiss
 import numpy as np
@@ -17,7 +15,6 @@ class Indexer:
         self.chunks_with_metadata = []
 
     def chunk_documents(self, documents):
-        # Splits documents into smaller chunks, keeping track of the source URL
         all_chunks = []
         for doc in documents:
             chunks = self.text_splitter.split_text(doc['text'])
@@ -26,7 +23,6 @@ class Indexer:
         return all_chunks
 
     def create_index(self, documents, index_path="vector_index.faiss", metadata_path="chunks_metadata.json"):
-        # Creates embeddings and builds the FAISS index
         self.chunks_with_metadata = self.chunk_documents(documents)
         snippets = [item['snippet'] for item in self.chunks_with_metadata]
         
@@ -39,7 +35,6 @@ class Indexer:
         
         print(f"Created index with {self.index.ntotal} vectors.")
         
-        # Save the index and the metadata 
         faiss.write_index(self.index, index_path)
         with open(metadata_path, 'w') as f:
             json.dump(self.chunks_with_metadata, f)

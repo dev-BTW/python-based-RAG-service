@@ -1,5 +1,3 @@
-# qa_service.py
-
 import json
 import time
 import faiss
@@ -7,7 +5,6 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from transformers import pipeline, logging
 
-# Suppress unnecessary warnings from transformers
 logging.set_verbosity_error()
 
 class QAService:

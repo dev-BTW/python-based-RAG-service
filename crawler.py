@@ -1,5 +1,3 @@
-# crawler.py
-
 import time
 import requests
 from bs4 import BeautifulSoup
@@ -37,14 +35,12 @@ class Crawler:
         )
 
     def _extract_text_and_links(self, html_content, page_url):
-        # Use trafilatura for main content extraction
         text = trafilatura.extract(html_content, include_comments=False, include_tables=False)
         
-        # Use BeautifulSoup to find all the links on the page
         soup = BeautifulSoup(html_content, 'html.parser')
         links = {urljoin(page_url, a['href']) for a in soup.find_all('a', href=True)}
         
-        return text or "", links # Ensure text is not None
+        return text or "", links 
 
     def crawl(self):
         urls_to_visit = [self.start_url]
@@ -60,7 +56,6 @@ class Crawler:
             
             try:
                 time.sleep(self.crawl_delay)
-                # **MODIFICATION HERE: Using a complete and standard User-Agent**
                 response = requests.get(
                     current_url, 
                     timeout=5, 
