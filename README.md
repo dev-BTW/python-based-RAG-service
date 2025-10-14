@@ -61,3 +61,8 @@ The System is designed on three distinct stages
 * Necessary to index the data every time
 * CLI-based, which is not suitable for regular users
 * Can only process static data
+
+#Next Steps (Future improvements)
+* Add a UI for better usability
+* Better retrieval strategy
+* Support for dynamic websites
