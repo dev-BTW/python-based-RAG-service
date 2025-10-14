@@ -1,10 +1,12 @@
 import argparse
 import json
+from flush import flush_generated_files
 from crawler import Crawler
 from indexer import Indexer
 from qa_service import QAService
 
 def run_crawl(args):
+    flush_generated_files()
     crawler = Crawler(args.start_url, args.max_pages, args.crawl_delay_ms)
     pages = crawler.crawl()
     

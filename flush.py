@@ -19,11 +19,11 @@ def flush_generated_files():
         try:
             if os.path.exists(filename):
                 os.remove(filename)
-                print(f"🗑️  Deleted: {filename}")
+                print(f"Deleted: {filename}")
             else:
-                print(f"⚪  Not found (already clean): {filename}")
+                print(f"Not found (already clean): {filename}")
         except OSError as e:
-            print(f"❌ Error deleting {filename}: {e}")
+            print(f"Error deleting {filename}: {e}")
 
     print("--- Cleanup Complete ---")
 
