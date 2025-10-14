@@ -31,6 +31,8 @@ The System is designed on three distinct stages
 
     ```python -m venv mvenv```
 
+    ```.\mvenv\Scripts\activate```
+
 2. Install dependencies
 
     ```pip install -r requirements.txt```
