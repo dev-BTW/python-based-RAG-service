@@ -33,13 +33,13 @@ The System is designed on three distinct stages
 2. Install dependencies
     ```pip install -r requirements.txt```
 
-3. python main.py crawl <website> --max_pages <no. of pages>
+3. python main.py crawl website --max_pages no. of pages
    ```python main.py crawl http://books.toscrape.com --max_pages 50```
    Note:- Only use http protocol
 
 4. ```python main.py index```
 
-5. python main.py ask "<question>"
+5. python main.py ask "question"
    ```python main.py ask "Which books are in the 'Mystery' category?"```
 
 
