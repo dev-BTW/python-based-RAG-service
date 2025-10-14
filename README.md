@@ -28,10 +28,10 @@ The System is designed on three distinct stages
 
 # Steps
 1. Clone the repo and create a virtual env
-    python -m venv venv
+    ```python -m venv venv```
 
 2. Install dependencies
-    pip install -r requirements.txt
+    ```pip install -r requirements.txt```
 
 3. python main.py crawl <website> --max_pages <no. of pages>
 
