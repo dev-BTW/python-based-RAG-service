@@ -11,3 +11,29 @@ The System is designed on three distinct stages
 1. Ingestion: Crawling and fetching Web Content
 2. Indexing: The ingested data is splitted into texts and then into chunks and a vector embedding is generated using 'sentence-transformers' and is stored in a 'FAISS' vector index for efficient similarity search.
 3. Ask: The 'qa_service' module takes question from user and retrieves the most relevant chunks from the index which is then fed into LLM 'google/flan-t5-base' to generate an answer progided on the info  
+
+# Requirements and steup
+1. Python 3
+2.  The following libraries
+    * requests
+    * beautifulsoup4
+    * trafilatura
+    * langchain
+    * sentence-transformers
+    * numpy
+    * faiss-cpu
+    * transformers
+    * torch
+    * accelerate
+
+# Trade offs 
+### Chose simplicity over robustness of data
+* In memory vector store:- Increased searching speed at cost of scalability
+* Open source:- Gained total control at cost of performance and 
+* No data cleaning:- Less computation and load on system ignoring the quality of data affecting the final output
+
+# Limitations
+* Limited scalability 
+* Necessary to index the data every time
+* CLI based which is not suitable for regular users
+* Can only process static data

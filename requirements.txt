@@ -1,0 +1,10 @@
+requests
+beautifulsoup4
+trafilatura
+langchain
+sentence-transformers
+numpy
+faiss-cpu
+transformers
+torch
+accelerate
