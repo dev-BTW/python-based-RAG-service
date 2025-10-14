@@ -12,8 +12,8 @@ The System is designed on three distinct stages
 2. Indexing: The ingested data is splitted into texts and then into chunks and a vector embedding is generated using 'sentence-transformers' and is stored in a 'FAISS' vector index for efficient similarity search.
 3. Ask: The 'qa_service' module takes question from user and retrieves the most relevant chunks from the index which is then fed into LLM 'google/flan-t5-base' to generate an answer progided on the info  
 
-# Requirements and steup
-1. Python 3
+# Requirements and setup
+1. Python 3.11 or above
 2.  The following libraries
     * requests
     * beautifulsoup4
@@ -25,6 +25,7 @@ The System is designed on three distinct stages
     * transformers
     * torch
     * accelerate
+3. 
 
 # Trade offs 
 ### Chose simplicity over robustness of data
