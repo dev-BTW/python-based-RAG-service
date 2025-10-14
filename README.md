@@ -39,7 +39,7 @@ The System is designed on three distinct stages
 
 3. python main.py crawl website --max_pages no. of pages
 
-   ```python main.py crawl http://books.toscrape.com --max_pages 50```
+   ```python main.py crawl http://books.toscrape.com --max_pages 50 --crawl_delay_ms 10```
    
    Note:- Only use http protocol
 
