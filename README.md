@@ -25,16 +25,15 @@ The System is designed on three distinct stages
     * transformers
     * torch
     * accelerate
-3. 
 
-# Trade offs 
+# Trade-offs 
 ### Chose simplicity over robustness of data
-* In memory vector store:- Increased searching speed at cost of scalability
-* Open source:- Gained total control at cost of performance and 
-* No data cleaning:- Less computation and load on system ignoring the quality of data affecting the final output
+* In memory vector store:- Increased searching speed at the cost of scalability
+* Open source:- Gained total control at the cost of performance and 
+* No data cleaning:- Less computation and load on the system, ignoring the quality of data affecting the final output
 
 # Limitations
 * Limited scalability 
 * Necessary to index the data every time
-* CLI based which is not suitable for regular users
+* CLI-based, which is not suitable for regular users
 * Can only process static data
