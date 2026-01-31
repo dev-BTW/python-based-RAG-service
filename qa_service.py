@@ -11,7 +11,7 @@ class QAService:
     def __init__(self, index_path="vector_index.faiss", metadata_path="chunks_metadata.json", embedding_model='all-MiniLM-L6-v2', llm_model='google/flan-t5-base'):
         self.index = faiss.read_index(index_path)
         self.embedding_model = SentenceTransformer(embedding_model)
-        self.llm = pipeline("text2text-generation", model=llm_model)
+        self.llm = pipeline("text-generation", model=llm_model)
         with open(metadata_path, 'r') as f:
             self.chunks_with_metadata = json.load(f)
 
