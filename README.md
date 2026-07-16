@@ -1,4 +1,4 @@
-# python-based-RAG-service
+# Python-based-RAG-service
 A small python based Retrieval‑Augmented Generation service 
 
 This project is a small, command-line-based Retrieval-Augmented Generation (RAG) service. 
